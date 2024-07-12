@@ -1,0 +1,15 @@
+# app/views/weather/index.html.erb
+<h1>Weather</h1>
+<%= form_tag weather_index_path, method: :get do %>
+  <%= label_tag :city, 'Enter city:' %>
+  <%= text_field_tag :city, params[:city] %>
+  <%= submit_tag 'Get Weather' %>
+<% end %>
+
+<% if @weather && @weather['cod'] == 200 %>
+  <h2>Weather in <%= @weather['name'] %></h2>
+  <p>Temperature: <%= @weather['main']['temp'] %>°C</p>
+  <p>Weather: <%= @weather['weather'][0]['description'] %></p>
+<% else %>
+  <p>Could not retrieve weather information. Please try again.</p>
+<% end %>
