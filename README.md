@@ -27,13 +27,15 @@ This is a simple weather application built with Ruby on Rails.
    cd weather_app
 2. install dependencies
   ensure the following gems are included in your 'Gemfile':
-    gem 'httparty', '~> 0.19.1'
-    gem 'dotenv-rails', '~> 2.7', '>= 2.7.7'
+   ```bash
+   gem 'httparty', '~> 0.19.1'
+   gem 'dotenv-rails', '~> 2.7', '>= 2.7.7'
   install dependencies:
     bundle install
 3. set up environment variables:
   - create a '.env' file in the root directory
   - add your OpenWeatherMap API key to the .env file:
+   ```bash
     OPENWEATHERMAP_API_KEY=your_api_key_here
 
 
